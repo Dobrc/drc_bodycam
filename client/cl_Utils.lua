@@ -1,5 +1,20 @@
 lib.locale()
 
+if Config.Framework == "ESX" then
+    ESX = nil
+    CreateThread(function()
+        while ESX == nil do
+            TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
+            Wait(100)
+        end
+    end)
+elseif Config.Framework == "qbcore" then
+    QBCore = nil
+    QBCore = exports["qb-core"]:GetCoreObject()
+elseif Config.Framework == "standalone" then
+    -- ADD YOU FRAMEWORK
+end
+
 RegisterNetEvent('drc_bodycam:notify')
 AddEventHandler('drc_bodycam:notify', function(type, title, text)
     Notify(type, title, text)
