@@ -1,0 +1,10 @@
+{
+    "error" : "Error", 
+    "success" : "Success", 
+    "bodycamon" : "Bodycam ON", 
+    "bodycamoff" : "Bodycam OFF",
+    "bodycamondesc" : "Use /bodycam to move your bodycam around!",
+    "turningonbodycam" : "Turning on bodycam", 
+    "turningoffbodycam" : "Turning off bodycam",
+    "invalidjob" : "Invalid Job"
+}
